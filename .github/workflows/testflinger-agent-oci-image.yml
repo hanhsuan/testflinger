@@ -1,18 +1,7 @@
 name: Ubuntu Docker Image CI
 
 # How to trigger this workflow
-on:
-  push:
-    branches: [ master ]
-    paths:
-      - 'agent/extra/docker/Dockerfile'
-  pull_request:
-    branches: [ master ]
-    paths:
-      - 'agent/extra/docker/Dockerfile'
-  workflow_dispatch:
-  schedule:
-    - cron: '0 0 1 * *'
+on: [push]
 
 jobs:
   push_to_registry:
